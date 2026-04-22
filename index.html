@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Koko's Library</title>
+</head>
+<body>
+    <header>
+        <h1>My Books</h1>
+        <button class="open-modal">+ Add book</button>
+    </header>
+
+    <main>
+        <div class="js-book-container"></div>
+    </main>
+
+    <dialog>
+        <form action="#" method="dialog">
+            <h2>Log a book</h2>
+            <p>Track what you're reading or have finished</p>
+            <div class="field">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="e.g The Great Gatsby" required>
+            </div>
+
+            <div class="field">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" placeholder="e.g F.Scott Fitzgerald" required>
+            </div>
+
+            <div class="field">
+                <label for="pages">Pages</label>
+                <input type="number" name="pages" id="pages" placeholder="e.g 180" min="1">
+            </div>
+
+
+            <fieldset>
+                <legend>Reading status</legend>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="status" value="done" required />
+                        <span>Done</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="status" value="not-yet" />
+                        <span>Not yet</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <button class='close' formmethod="dialog">Cancel</button>
+            <button type="submit" formmethod="dialog">Submit entry</button>
+
+        </form>
+
+        <footer></footer>
+    </dialog>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
