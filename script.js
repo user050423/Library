@@ -1,17 +1,19 @@
+class Book {
+    constructor(title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+        this.id = crypto.randomUUID();
+    }
+}
+
 let library = [
   new Book('To Kill a Mockingbird', 'Harper Lee', 400, 'done'),
   new Book('The Lord of the Rings', 'JRR Tolkien', 345, 'done'),
   new Book('Pride and Prejudice', 'Jane Austen', 345, 'done'),
 ];
 
-
-function Book(title, author, pages, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-    this.id = crypto.randomUUID();
-}
 
 function addBookToLibrary(title, author, pages, status) {
     library.push(new Book(title, author, pages, status));
